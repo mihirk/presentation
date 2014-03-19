@@ -1,0 +1,6 @@
+My talk is on Vagrant Virtual Machines, provisioning of the same using Ansible to make team scaling and ramp ups less painful and reduce the initial dip in productivity.
+
+Team expansions always lead to initial drop in productivity. There are a lot of problems whenever new members join the team. The team productivity may increase after all the new joinees have been induced to what the team has been working on and once they are made capable to contribute to the project. But the enablement part is the most painful part, and does eat up a lot of utilisation. 
+
+
+
