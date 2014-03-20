@@ -1,11 +1,28 @@
-Intro
+[1]Intro
 My talk is on Vagrant Virtual Machines, provisioning of the same using Ansible an attempt towards making team scaling and ramp ups less painful and reduce the initial dip in productivity.
 
-Common Problems faced with team expansion
-Team expansions always lead to initial drop of productivity. There are a lot of problems whenever new members join the team. The team productivity may increase after all the new joinees have been induced to what the team has been working on and once they are made capable to contribute to the project. But the enablement part is the most painful part, and does eat up a lot of utilisation. 
+[2]Common Problems faced with team expansion
+Team expansions always lead to initial drop of productivity. There are a lot of problems whenever new developers join the team. The team productivity may increase after all the new joinees have been induced to what the team has been working on and once they are made capable to contribute to the project. But the enablement part is the most painful part, and does eat up a lot of utilisation. 
 
-Setting up the development environment
-So when new developers join the team, before they can start with understanding the codebase, their development environments need to be setup. Now they cannot even start with understanding the codebase until their development environment is setup, and they can see the application working on their computer. 
+[3]Setting up the development environment
+So when new developers join the team, before they can start with understanding the codebase, their development environments need to be setup. Now they cannot even start with understanding the codebase until their development environment is setup, and they can see the application working on their computer. So how many of you have seen development environment setup procedures which involve a lot of phrases like - "Run that script, but yeah run that before this, and make sure you have this
+version of that software installed before that. I don't know why this isn't working on your computer, it works just fine for me, and I followed the same steps."
+
+[4]Development Environment Setup
+Initial Dip in Team productivity - 
+    A team usually is ramped up to increase the productivity of the project. But whenever a new member joins the team there is always an initial drop in team and project productivity because atleast one older team member has to help out the new member with setting up the development environment and also explain the codebase. Now removing the initial drop in team productivity is almost impossible. But the delta between a new member joining and impacting the team productivity in a positive can
+    be cut down. 
+
+Recurring problem - 
+    When a project is ramping up, it rarely is a case that all the new members join the team together. So when the members come in asynchronously, the project productivity takes a recurring hit. So cutting down the previously mentioned delta will help a lot, since it is then multiplied by the number of times this procedure is repeated.
+
+Different Operating Systems - 
+    Different team additions may have different operating systems and hardware. The difference in operating systems makes it an even more time consuming process, and sometimes even spikes(looking at you windows). The difference in installing a simple thing like Google Chrome between a Centos 6.5 machine and an Ubuntu 12.04 is huge. Imagine that over multiple databases, different development kits of different languages and different plugins. THey also involve following different set of
+    procedures to attain the same things on different machines, so even documentation won't help there because every operating system will have different procedures to attain the same thing. Even the same bash scripts won't work here. Even different installations of the same operating systems will have issues like directory permissions, which may lead to some scripts failing. 
+
+Automated Scripts - 
+    Total automation scripts are very difficult to write when writing for different operating systems, or even the same operating system but for different installations. Making them idempotent and work on dirty environments is extremely difficult and extremely time consuming. There is always that one directory which might have a different owner or permissions on someone elses machine, or a simple non updation of an environment variable can fail an installation. Freaking locale. 
+
 
 
 
