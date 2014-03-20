@@ -1,0 +1,17 @@
+Problems
+    Ease of Devbox setup
+    Having realistic environments
+    Version Conflict
+Virtualization
+    Virtualization and VirtualBox
+    What is Vagrant
+What Vagrant
+    What Vagrant is
+    What does Vagrant bring over VirtualBox
+    (brief)Vagrant and configuration management (provisioners)
+How Vagrant
+    Vagrantfile
+    Flow of working - Block Diagram
+    Demo
+    Vagrant time run
+Advantages of using Vagrant
