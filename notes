@@ -20,9 +20,12 @@ Different Operating Systems -
     Different team additions may have different operating systems and hardware. The difference in operating systems makes it an even more time consuming process, and sometimes even spikes(looking at you windows). The difference in installing a simple thing like Google Chrome between a Centos 6.5 machine and an Ubuntu 12.04 is huge. Imagine that over multiple databases, different development kits of different languages and different plugins. THey also involve following different set of
     procedures to attain the same things on different machines, so even documentation won't help there because every operating system will have different procedures to attain the same thing. Even the same bash scripts won't work here. Even different installations of the same operating systems will have issues like directory permissions, which may lead to some scripts failing. 
 
-Automated Scripts - 
-    Total automation scripts are very difficult to write when writing for different operating systems, or even the same operating system but for different installations. Making them idempotent and work on dirty environments is extremely difficult and extremely time consuming. There is always that one directory which might have a different owner or permissions on someone elses machine, or a simple non updation of an environment variable can fail an installation. Freaking locale. 
+Automated Scripts may it be Shell, Pupper, Chef or Ansible  - 
+    Total automation scripts are very difficult to write when writing for different operating systems, or even the same operating system but for different installations. Making them idempotent and work on dirty environments is extremely difficult and extremely time consuming. There is always that one directory which might have a different owner or permissions on someone elses machine, or a simple non updation of an environment variable can fail an installation. Freaking Locale. LC_ALL and
+    stuff. 
 
+[5]Difference in Environments
+    A project will have multiple environments, like the CI, Staging, QA etc, differs project to project. But there will always be a lot of differences between the dev environment and the environments on the cloud or wherever they are hosted. They can range from different operating systems to different environment variable settings. Now even if all the environments have been setup using the same automation scripts run on identical Operating Systems, they will still always be different to
+    the development environment, because the development environment is always dirty with many different factors, like other softwares serving as side-effects, the environment variables etc. 
 
-
-
+[6]
