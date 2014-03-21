@@ -30,4 +30,15 @@ Automated Scripts may it be Shell, Pupper, Chef or Ansible  -
 
 [6]Codebase requirement conflict
     If the development machine is being to used to work on multiple codebases at the same time, different stack or the same stack, it may lead to a lot of conflicts between the different dependencies of different codebases. So Python will offer something like virtual environments, ruby will have rvm, but it still is very difficult to avoid conflicts, or unexpected failure of code. Something as simple as installing a gem for one codebase and not adding that gem to the other codebase's gemfile,
-    will work out on the local environment but will definitely fail on CI. Installing multiple versions of databases is also very difficult, like using Postgres 8.4 and Post 9.0, the PSQL server will be running on multiple ports on the dev environent but on the CI both will assume the default port. 
+    will work out on the local environment but will definitely fail on CI. Also for one software you might have to modify like upgrade or downgrade a dependency, which might lead to the other software failing, if both of them are using the same dependency. Installing multiple versions of databases is also very difficult, like using Postgres 8.4 and Post 9.0, the PSQL server will be running on multiple ports on the dev environent but on the CI both will assume the default port.
+    A lot of work needs to be done to use the virtualization tools provided by the languages. Something small like separating out the logs for two projects.
+
+[7]Virtualization
+    There are three types of virtualizations. Full Virtualization, Partial Virtualization and Para virtualization. 
+    I will only be covering Full virtualization. In full virtualization enough hardware is simulated from the actual hardware to support an unmodified guest operating system. The other techniques have their own usages, like AWS uses para virtualization using XEN. Paravirtualization requires OS modification.
+
+[8]VirtualBox
+    Virtual box is a full virtualization software, it helps spin off Virtual machines running operating system of choice by simulating hardware from the host machine. There are many full virtualization softwares like Virtual Box and VM Ware, but only VirtualBox will be covered in the scope of this talk. Since it is free, open source so can be used by anyone. 
+VirtualBox allows one to create multiple Virtual machines running different operating systems on the same host machine. It also supports bridging of the real hardware interfaces to the virtual machines. It also assigns some HDD space to each virtual machine where the operating system is installed, and other requirements. It also has support for Operating systems with graphical user interface.
+
+
