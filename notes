@@ -41,6 +41,17 @@ Automated Scripts may it be Shell, Puppet, Chef or Ansible
 There are Vagrantboxes easily available at many sites like http://www.vagrantbox.es/ or https://vagrantcloud.com/
 You can create your own Vagrant boxes, but more on that later.
 
-
 [14]Vagrantfile
   The Virtual Machine's configuration can be managed using the Vagrantfile. The Vagrantfile has to be placed in the project directory and also its better to push it to version control. The Vagrantfile covers everything, from what base box to use, or from where to download the base box from etc. Port forwarding is also configured in the Vagrantfile, so a webserver is running in the Virtual Machine on say on the port 80, so it can be forwarded to any unused port on the host machine. A private network or a public netwrok IP can also be assigned to the VM and its configuration can be specified in the Vagrant file. So you ssh into the Vagrant managaed VM from the host machine. The ssh configurations are also specified in the Vagrantfile.
+
+[15]Vagrant Provisioners
+  Vagrant provides options to plugin configuration management tools, like Chef, Puppet etc. These provisioners can be specified in the Vagrant file, can be triggered with vagrant provision or the --provision flag.
+
+[16]Ansible
+  Ansible is another orchestration and configuration management tool. The best part about it is that it works without having any client agent installed on the client side. It ssh'es from the provisioning machine to the client machine to be provisioned and since all unix and linux based operating systems come with Python, it doesn't need any client side implementation. Its configuration files namely playbooks and roles are written in YAML, so it is easy for everyone to use. It uses Jinja2 syntax.
+
+[17]Vagrant and Ansible
+  Vagrant offers add on plugins for ansible, where the configuration can be specified in the Vagrantfile itself, but, ansible can be used on vagrant machines without the help of the extra plugin. I won't be covering that plugin since it is very specific to Vagrant, so better to cover Vagrant provisioning using a generic method.
+
+[18]Advantages of Vagrant
+  On top of the advantages(also some disadvantages) gained by using virtual machines vagrant offers configuration management. You can use the same operating system between all the environments. It is extremely easy to package the current environment once setup and distribute it as a base box to the entire team. And it makes virtual machines a lot easier to use, and make them actually practical to use.
